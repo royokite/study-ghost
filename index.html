@@ -5,12 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <title>Ghibli Swap</title>
+    <link rel="icon" href="./images/logo1.png" />
+    <title>Royz Ghibli Swap</title>
   </head>
   <body>
     <section id="site-header">
-      <img id="logo" src="./images/logo.png" alt="page-logo" />
+      <img id="logo" src="./images/logo1.png" alt="page-logo" />
+      <article class="alert">
+        <strong>AWESOME!</strong> Movie added to favourites.
+      </article>
     </section>
+    <hr />
+
     <section id="add-item">
       <form id="input-form" action="#" method="POST">
         <label for="name">Product Name: </label> <br />
@@ -40,7 +46,9 @@
       </form>
     </section>
     <section id="products"></section>
-    <footer id="footer"></footer>
+    <footer id="footer">
+      <p>&copy; Roy Okite 2022</p>
+    </footer>
     <script src="./src/index.js"></script>
   </body>
 </html>

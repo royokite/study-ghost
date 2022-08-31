@@ -1,3 +1,9 @@
+body {
+    background-image: url(./images/bg1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
 #site-header {
     display: flex;
     justify-content: center;
@@ -5,18 +11,19 @@
 }
 
 #logo {
-    height: 6rem;
+    height: 10rem;
     width: auto;
 }
+
+hr {background-color: aqua;}
 
 #add-item {
     display: none;
 }
 
 #products {
-    /* background-image: url(./images/bg.jpg); */
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: auto auto auto; 
     padding: 20px;
     column-gap: 1rem;
     row-gap: 2.5rem;
@@ -34,6 +41,8 @@ li {
     transition: 0.3s;
     align-items: center;
     justify-content: center;
+    background-color: black;
+    color: aqua;
 }
 
 .product-image {
@@ -44,13 +53,86 @@ li {
 
 .card-content {
     padding: 8px 8px;
+    text-align: center;
     position: relative;
+    display: grid;
+    grid-template-areas: 
+        'title title original_title original_title'
+        'director director producer producer'
+        'description description description description'
+        'description description description description'
+        'release_date running_time rt_score rt_score'
+        'favourites comment rent rent';
 }
 
 .product-category {
     float: right;
 }
 
-/* #footer {
+#footer {
     background-color: black;
-} */
+    color: aqua;
+    text-align: center;
+    height: 3rem;
+    padding: 1rem;
+    font-size: large;
+    font-style: italic;
+    font-family: Lucida Handwriting;
+}
+
+.button {
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.box1 {grid-area: title;}
+.box2 {grid-area: original_title;}
+.box3 {grid-area: director;}
+.box4 {grid-area: producer;}
+.box5 {
+    grid-area: description;
+    color: azure;
+}
+.box6 {grid-area: release_date;}
+.box7 {grid-area: running_time;}
+.box8 {grid-area: rt_score;}
+.box9 {
+    grid-area: favourites;
+    background-color: transparent; 
+    color: black;
+    font-size: 2rem;
+    padding: 0px;
+}
+.box10 {
+    grid-area: comment;
+    background-color: #008CBA;
+}
+.box11 {
+    grid-area: rent;
+    background-color: #4CAF50;
+}
+
+.alert {
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+    position: fixed;
+    margin: auto;
+    width: 40%;
+    padding: 1rem;
+    text-align: center;
+    display: none;
+
+}
