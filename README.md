@@ -1,1 +1,1 @@
-This is my README file
+Moringa school phase 1 project.
