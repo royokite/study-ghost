@@ -1,0 +1,28 @@
+#site-header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#logo {
+    height: 6rem;
+    width: auto;
+}
+
+#add-item {
+    display: none;
+}
+
+/* #products {
+    background-image: url(./images/bg.jpg);
+    display: flex;
+} */
+
+
+li {
+    list-style: none;
+}
+
+#footer {
+    display: none;
+}
