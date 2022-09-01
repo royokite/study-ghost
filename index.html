@@ -9,6 +9,7 @@
     <title>Royz Ghibli Swap</title>
   </head>
   <body>
+    <!-- header section -->
     <section id="site-header">
       <img id="logo" src="./images/logo1.png" alt="page-logo" />
       <article class="alert-blue">
@@ -20,38 +21,114 @@
       <article class="alert-green">
         <strong>NICE!</strong> Movie added to cart ;D
       </article>
+      <article class="alert-purple">
+        <strong>BOSSMAN!</strong> Sharing is caring, Thanks!
+      </article>
     </section>
     <hr />
-
+    <!-- Add movie form -->
     <section id="add-item">
-      <form id="input-form" action="#" method="POST">
-        <label for="name">Product Name: </label> <br />
+      <form id="movie-form" action="">
+        <h3>MOVIE DETAILS</h3>
+        <label for="name">Movie Title: </label>
         <input
           id="name"
           type="text"
-          name="product-name"
-          placeholder="Add Product Name"
+          name="movie-name"
+          placeholder="Add Movie Name"
         />
-        <br />
-        <label for="image">Product Image URL: </label> <br />
+
+        <label for="image">Image URL: </label>
         <input
           id="image"
-          type="url"
-          name="product-image"
-          placeholder="Add Product Image URL"
-        />
-        <br />
-        <label for="description">Describe the product: </label> <br />
-        <input
-          id="description"
           type="text"
-          name="product-description"
-          placeholder="Add Description"
+          name="movie-image"
+          placeholder="Add Movie Image URL"
         />
-        <br />
+
+        <label for="director">Director: </label>
+        <input
+          id="director"
+          type="text"
+          name="movie-director"
+          placeholder="Add Movie Director"
+        />
+
+        <label for="producer">Producer: </label>
+        <input
+          id="producer"
+          type="text"
+          name="movie-producer"
+          placeholder="Add Movie Producer"
+        />
+
+        <label for="release-date">Release Date: </label>
+        <input
+          id="release-date"
+          type="text"
+          name="movie-release-date"
+          placeholder="Add Movie Release Date"
+        />
+
+        <label for="run-time">Movie Run Time: </label>
+        <input
+          id="run-time"
+          type="text"
+          name="movie-run-time"
+          placeholder="Add
+        Movie Run Time"
+        />
+
+        <label for="score">Movie Score: </label>
+        <input
+          id="score"
+          type="text"
+          name="movie-score"
+          placeholder="Add Movie Rating"
+        />
+
+        <label for="description">Describe the Movie: </label> <br />
+        <textarea
+          name="description"
+          id="description"
+          cols="20"
+          rows="5"
+          placeholder="Add Description"
+        ></textarea>
+        <input type="submit" value="Submit Movie" />
       </form>
     </section>
+    <button id="new-movie-btn">SHARE A MOVIE</button>
+    <!-- Movies section -->
     <section id="products"></section>
+    <hr />
+
+    <!-- Comment section -->
+    <h2>Comments</h2>
+
+    <section class="dialogbox">
+      <form action="" id="post-comment">
+        <textarea
+          class="comment-space"
+          placeholder="Type your comment here"
+        ></textarea>
+        <br />
+        <input type="submit" name="submit" value="Add Comment 💬" />
+        <!-- <button class="box10 button" type="submit" value="submit">
+          Add 💬
+        </button> -->
+      </form>
+      <hr />
+      <section id="posted-comments">
+        <article class="comment-body">
+          <span class="tip tip-up"></span>
+          <article class="message">
+            <mark class="comment-text">Roy: "Be Nice!" 😎</mark>
+          </article>
+        </article>
+      </section>
+    </section>
+    <!-- Footer section -->
     <footer id="footer">
       <p>&copy; Roy Okite 2022</p>
     </footer>
