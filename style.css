@@ -121,10 +121,10 @@ li {
 }
 .box11 {
     grid-area: rent;
-    background-color: #4CAF50;
+    background-color: #9900FF;
 }
 
-.alert {
+.alert-green {
     padding: 20px;
     background-color: #4CAF50;
     color: white;
@@ -134,5 +134,28 @@ li {
     padding: 1rem;
     text-align: center;
     display: none;
+}
 
+.alert-red {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    position: fixed;
+    margin: auto;
+    width: 40%;
+    padding: 1rem;
+    text-align: center;
+    display: none;
+}
+
+.alert-blue {
+    padding: 20px;
+    background-color: #0c5c9b;
+    color: white;
+    position: fixed;
+    margin: auto;
+    width: 40%;
+    padding: 1rem;
+    text-align: center;
+    display: none;
 }

@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', runProject());
 
 function renderProducts(movie) {
-    const movieSpace = document.querySelector('#products');
+    const movieSpace = document.querySelector('#products')
 
       
     let card = document.createElement('li');
-    card.className = 'card';
+    card.className = 'card'
     card.innerHTML = `
     <img src='${movie.image}' class='product-image'/>
     <section class='card-content'>
@@ -21,7 +21,7 @@ function renderProducts(movie) {
         <button class='box10 button'>Comment</button>
         <button class='box11 button'>Rent</button>  
     </section>
-    `;
+    `
 
     movieSpace.appendChild(card);
 }
@@ -40,15 +40,20 @@ function runProject() {
         const likeButtons = document.querySelectorAll('.box9');
         const CommentButtons = document.querySelectorAll('.box10');
         const rentButtons = document.querySelectorAll('.box11');
+        const toggleGreenBanner = document.querySelector('.alert-green')
+        const toggleRedBanner = document.querySelector('.alert-red')
+        const toggleBlueBanner = document.querySelector('.alert-blue')
         
         likeButtons.forEach((btn) => {
             btn.addEventListener('click', () => {
                 if (btn.textContent===notLiked) {
                     btn.textContent = liked
-                    alert('Add movie to favourites?')
+                    toggleBlueBanner.style.display = 'block'
+                    setTimeout(() => toggleBlueBanner.style.display = 'none', 3000)
                 } else {
                     btn.textContent = notLiked
-                    alert('Remove from favourites?')
+                    toggleRedBanner.style.display = 'block'
+                    setTimeout(() => toggleRedBanner.style.display = 'none', 3000)
                 }                
             })
         });
@@ -59,7 +64,10 @@ function runProject() {
         });
         rentButtons.forEach((btn) => {
             btn.addEventListener('click', () => {
-                alert('Rent the ting!')
+                toggleGreenBanner.style.display = 'block'
+                btn.textContent = '+🛒'
+                btn.style.background = '#4CAF50'
+                setTimeout(() => toggleGreenBanner.style.display = 'none', 3000)
             })
         })
 
