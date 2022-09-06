@@ -179,7 +179,19 @@ li {
     display: none;
 }
 
-.tip {
+.alert-orange {
+    padding: 20px;
+    background-color: #FFA500;
+    color: white;
+    position: fixed;
+    margin: auto;
+    width: 40%;
+    padding: 1rem;
+    text-align: center;
+    display: none;
+}
+
+.point {
     width: 0px;
     height: 0px;
     position: absolute;
@@ -187,7 +199,7 @@ li {
     border: 10px solid #ccc;
 }
 
-.tip-up {
+.point-up {
     top: -25px; /* Same as body margin top + border */
     left: 10px;
     border-right-color: transparent;
@@ -327,4 +339,10 @@ textarea {
 .comment-text {
     color: aqua;
     background: none;
+}
+
+.comment-time {
+    background: aqua;
+    color: black;
+    float: right;
 }

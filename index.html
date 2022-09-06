@@ -24,6 +24,9 @@
       <article class="alert-purple">
         <strong>BOSSMAN!</strong> Sharing is caring, Thanks!
       </article>
+      <article class="alert-orange">
+        <strong>Oi!</strong> Movie removed from cart!
+      </article>
     </section>
     <hr />
     <!-- Add movie form -->
@@ -36,6 +39,7 @@
           type="text"
           name="movie-name"
           placeholder="Add Movie Name"
+          required
         />
 
         <label for="original-name">Alternate Title: </label>
@@ -44,6 +48,7 @@
           type="text"
           name="movie-original-name"
           placeholder="Add Original Movie Name"
+          required
         />
 
         <label for="image">Image URL: </label>
@@ -52,6 +57,7 @@
           type="text"
           name="movie-image"
           placeholder="Add Movie Image URL"
+          required
         />
 
         <label for="director">Director: </label>
@@ -60,6 +66,7 @@
           type="text"
           name="movie-director"
           placeholder="Add Movie Director"
+          required
         />
 
         <label for="producer">Producer: </label>
@@ -68,6 +75,7 @@
           type="text"
           name="movie-producer"
           placeholder="Add Movie Producer"
+          required
         />
 
         <label for="release-date">Release Date: </label>
@@ -76,6 +84,7 @@
           type="text"
           name="movie-release-date"
           placeholder="Add Movie Release Date"
+          required
         />
 
         <label for="run-time">Movie Run Time: </label>
@@ -83,8 +92,8 @@
           id="run-time"
           type="text"
           name="movie-run-time"
-          placeholder="Add
-        Movie Run Time"
+          placeholder="Add Movie Run Time"
+          required
         />
 
         <label for="score">Movie Score: </label>
@@ -93,6 +102,7 @@
           type="text"
           name="movie-score"
           placeholder="Add Movie Rating"
+          required
         />
 
         <label for="description">Describe the Movie: </label> <br />
@@ -102,6 +112,7 @@
           cols="20"
           rows="5"
           placeholder="Add Description"
+          required
         ></textarea>
         <input type="submit" value="Submit Movie" name="submit-movie" />
       </form>
@@ -123,20 +134,13 @@
           placeholder="Type your comment here"
         ></textarea>
         <br />
-        <input type="submit" name="submit" value="Add Comment 💬" />
+        <input type="submit" name="submit-comment" value="Add Comment 💬" />
         <!-- <button class="box10 button" type="submit" value="submit">
           Add 💬
         </button> -->
       </form>
       <hr />
-      <section id="posted-comments">
-        <article class="comment-body">
-          <span class="tip tip-up"></span>
-          <article class="message">
-            <mark class="comment-text">Roy: "Be Nice!" 😎</mark>
-          </article>
-        </article>
-      </section>
+      <section id="posted-comments"></section>
     </section>
     <!-- Footer section -->
     <footer id="footer">

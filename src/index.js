@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', runProject());
 
 const movieSpace = document.querySelector('#products')
+
 function renderProducts(movie) {
 
     let card = document.createElement('li');
@@ -16,7 +17,7 @@ function renderProducts(movie) {
         <article class='box6'>Released: ${movie.release_date}</article>
         <article class='box7'>Run Time: ${movie.running_time}mins</article>
         <article class='box8'>Rating: ${movie.rt_score}</article>
-        <button class='box9 button'>${notLiked}</button><p class='likes'>50<span> Likes</span></p>
+        <button class='box9 button'>${notLiked}</button><p class='likes'>101<span> Likes</span></p>
         <button class='box11 button'>Rent</button>  
     </section>
     `
@@ -42,6 +43,7 @@ function runProject() {
         const toggleGreenBanner = document.querySelector('.alert-green')
         const toggleRedBanner = document.querySelector('.alert-red')
         const toggleBlueBanner = document.querySelector('.alert-blue')
+        const toggleOrangeBanner = document.querySelector('.alert-orange')
         
         likeButtons.forEach((btn) => {
             btn.addEventListener('click', (e) => {
@@ -67,16 +69,20 @@ function runProject() {
             })
         });
 
-        // CommentButton.addEventListener('click', () => {
-        //         alert('Add a comment bud!')
-        //     });
-
         rentButtons.forEach((btn) => {
-            btn.addEventListener('click', () => {
-                toggleGreenBanner.style.display = 'block'
-                btn.textContent = '+🛒'
-                btn.style.background = '#4CAF50'
-                setTimeout(() => toggleGreenBanner.style.display = 'none', 3000)
+            btn.addEventListener('click', (e) => {
+                if(e.target.textContent==='Rent') {
+                    toggleGreenBanner.style.display = 'block'
+                    btn.textContent = '+🛒'
+                    btn.style.background = '#4CAF50'
+                    setTimeout(() => toggleGreenBanner.style.display = 'none', 3000) 
+                } else {
+                    toggleOrangeBanner.style.display = 'block'
+                    btn.textContent = 'Rent'
+                    btn.style.background = '#9900FF'
+                    setTimeout(() => toggleOrangeBanner.style.display = 'none', 3000)
+
+                }                
             })
         })
     })    
@@ -103,16 +109,48 @@ function runProject() {
     commentsForm.addEventListener('submit', e => {
         e.preventDefault()
         const userComment = document.querySelector('.comment-space').value
+        let datePosted = new Date().toISOString().slice(0, 10)
         const commentBody = document.createElement('article')
         commentBody.className = 'comment-body'
         commentBody.innerHTML = `
-            <mark class='tip tip-up'></mark>
+            <mark class='point point-up'></mark>
             <article class='message'>
                 <mark class='comment-text'>${userComment}</mark>
+                <mark class='comment-time'>${datePosted}</mark>
             </article>
         `
+
+        fetch('http://localhost:3000/comments', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: 'application/json'
+            },
+            body: JSON.stringify({
+                comment: document.querySelector('.comment-space').value,
+                date: datePosted
+            })
+        })
+
         postedComments.appendChild(commentBody)
         commentsForm.reset()        
+    })
+
+    fetch('http://localhost:3000/comments')
+    .then(response => response.json())
+    .then(allComments => {
+        allComments.map(eachComment => {
+            const commentBody = document.createElement('article')
+            commentBody.className = 'comment-body'
+            commentBody.innerHTML = `
+                <mark class='point point-up'></mark>
+                <article class='message'>
+                    <mark class='comment-text'>${eachComment.comment}</mark>
+                    <mark class='comment-time'>${eachComment.date}</mark>
+                </article>
+            `
+            postedComments.appendChild(commentBody)
+        })
     })
 
     movieForm.addEventListener('submit', e => {
@@ -147,6 +185,6 @@ function runProject() {
     })
     
     fetch('http://localhost:3000/animations')
-        .then(response => response.json())
-        .then(newMovie => newMovie.map(eachaddition => renderProducts(eachaddition)))
+    .then(response => response.json())
+    .then(newMovie => newMovie.map(eachaddition => renderProducts(eachaddition)))
 }
