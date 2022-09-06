@@ -38,6 +38,14 @@
           placeholder="Add Movie Name"
         />
 
+        <label for="original-name">Alternate Title: </label>
+        <input
+          id="original-name"
+          type="text"
+          name="movie-original-name"
+          placeholder="Add Original Movie Name"
+        />
+
         <label for="image">Image URL: </label>
         <input
           id="image"
@@ -95,10 +103,12 @@
           rows="5"
           placeholder="Add Description"
         ></textarea>
-        <input type="submit" value="Submit Movie" />
+        <input type="submit" value="Submit Movie" name="submit-movie" />
       </form>
     </section>
     <button id="new-movie-btn">SHARE A MOVIE</button>
+    <!-- New movies section -->
+    <section id="new-movies"></section>
     <!-- Movies section -->
     <section id="products"></section>
     <hr />

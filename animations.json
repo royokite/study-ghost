@@ -1,0 +1,28 @@
+{
+  "animations": [
+    {
+      "id": 1,
+      "title": "Ocean Waves",
+      "original_title": "海がきこえる",
+      "image": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQxJCqrnrjQju0gNNwnTHnsO1wUPRvi5OVlvoYw1PbDN4XzYw7k",
+      "description": "The film is set in the city of Kōchi, and follows a love triangle that develops between two good friends and a new girl who transfers to their high school from Tokyo. Ocean Waves was an attempt by Studio Ghibli to allow their younger staff members to make a film reasonably cheaply. However, it ended up going both over budget and over schedule. In 1995, a sequel to the novel, I Can Hear the Sea II: Because There Is Love, was published. In the same year, a TV drama was produced mainly based on this work starring Shinji Takeda and Hitomi Satō.",
+      "director": "Tomomi Mochizuki",
+      "producer": "Nozomu Takahashi, Seiji Okuda & Toshio Suzuki",
+      "release_date": "1993",
+      "running_time": "72",
+      "rt_score": "88"
+    },
+    {
+      "title": "Nausicaä of the Valley of the Wind",
+      "original_title": "風の谷のナウシカ",
+      "image": "https://upload.wikimedia.org/wikipedia/en/b/bc/Nausicaaposter.jpg",
+      "director": "Hayao Miyazaki",
+      "producer": "Isao Takahata",
+      "release_date": "1984",
+      "running_time": "117",
+      "rt_score": "89",
+      "description": "Taking place in a post-nuclear futuristic world, the film tells the story of Nausicaä (Shimamoto), the young teenage princess of the Valley of the Wind. She becomes embroiled in a struggle with Tolmekia, a kingdom that tries to use an ancient weapon to eradicate a jungle full of giant mutant insects.",
+      "id": 2
+    }
+  ]
+}

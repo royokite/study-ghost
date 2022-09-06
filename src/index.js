@@ -1,9 +1,8 @@
 document.addEventListener('DOMContentLoaded', runProject());
 
+const movieSpace = document.querySelector('#products')
 function renderProducts(movie) {
-    const movieSpace = document.querySelector('#products')
 
-      
     let card = document.createElement('li');
     card.className = 'card'
     card.innerHTML = `
@@ -121,8 +120,33 @@ function runProject() {
         togglePurpleBanner.style.display = 'block'
         setTimeout(() => togglePurpleBanner.style.display = 'none', 3000)
 
-        movieForm.reset()
+        const newMovieData = {
+            "title": document.querySelector('#name').value,
+            "original_title": document.querySelector('#original-name').value,
+            "image": document.querySelector('#image').value,
+            "director": document.querySelector('#director').value,
+            "producer": document.querySelector('#producer').value,
+            "release_date": document.querySelector('#release-date').value,
+            "running_time": document.querySelector('#run-time').value,
+            "rt_score": document.querySelector('#score').value,
+            "description": document.querySelector('#description').value,
+        }
+
+        fetch('http://localhost:3000/animations', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: 'application/json',
+            },
+            body: JSON.stringify(newMovieData)
+        })
+        .then(response => response.json())
+        .then(added => console.log(added))
+
+        movieForm.reset()        
     })
-
-
+    
+    fetch('http://localhost:3000/animations')
+        .then(response => response.json())
+        .then(newMovie => newMovie.map(eachaddition => renderProducts(eachaddition)))
 }
