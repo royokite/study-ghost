@@ -6,8 +6,6 @@
 
 ## Project Description
 
-This project aims to fulfill requirements for the Moringa School phase 1 project.
-
 The project is a single web page that presents users with a variety of foreign animated films.
 These have been rendered from a publicly available API `https://ghibliapi.herokuapp.com/films`
 
@@ -32,22 +30,19 @@ The page utilizes HTML for structure, CSS for styling and JavaScript for interac
 
 A user is able to:
 
-- <mark background='DarkCyan'>Rent a movie</mark> by clicking the `RENT` button which adds it to the cart `+🛒`, a second click
+- Rent a movie by clicking the `RENT` button which adds it to the cart `+🛒`, a second click
   removes the item from the cart. Both interactions trigger a banner that confirms the action.
-- <mark background='DarkCyan'>Like a movie</mark> through the `❤️` button to add it to favourites, a second `🖤` click undoes this
+- Like a movie through the `❤️` button to add it to favourites, a second `🖤` click undoes this
   with banners as well for every action.
-
-  ![Some films](./images/films.png)
-
-- CLick the `Add Comment 💬` button to <mark background='DarkCyan'>add a comment</mark> at the bottom of the page. This presents
+- CLick the `Add Comment 💬` button to add a comment at the bottom of the page. This presents
   the comment and date posted in the dialogue box.
 
   ![Comment section](./images/comments.png)
 
-- <mark background='DarkCyan'>Add a new film</mark> by clicking the `SHARE A MOVIE` button which presents a form where the
+- Add a new film by clicking the `SHARE A MOVIE` button which presents a form where the
   user inputs all the required details and then using the `Submit Movie` to add it to
   the list of available films below. A `HIDE FORM` button hides the form after use.
-  All fields are <mark background='DarkCyan'>required</mark> when submitting a new film for consistency.
+  All fields are required when submitting a new film for consistency.
 
   ![New film form](./images/form.png)
 
@@ -103,3 +98,5 @@ thanks goes to `Studio Ghibli` as details from their quality and critically accl
 films inspired the creation of this project.
 
 All the code and resources utilized have been developed by myself.
+
+[^1]: This project aims to fulfill requirements for the Moringa School phase 1 project.
