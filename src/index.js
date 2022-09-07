@@ -38,7 +38,6 @@ function runProject() {
         allProducts.forEach(movie => renderProducts(movie));
 
         const likeButtons = document.querySelectorAll('.box9');
-        // const CommentButton = document.querySelector('.box10');
         const rentButtons = document.querySelectorAll('.box11');
         const toggleGreenBanner = document.querySelector('.alert-green')
         const toggleRedBanner = document.querySelector('.alert-red')
