@@ -32,22 +32,22 @@ The page utilizes HTML for structure, CSS for styling and JavaScript for interac
 
 A user is able to:
 
-- ==Rent a movie== by clicking the `RENT` button which adds it to the cart `+🛒`, a second click
+- <mark background='DarkCyan'>Rent a movie</mark> by clicking the `RENT` button which adds it to the cart `+🛒`, a second click
   removes the item from the cart. Both interactions trigger a banner that confirms the action.
-- ==Like a movie== through the `❤️` button to add it to favourites, a second `🖤` click undoes this
+- <mark background='DarkCyan'>Like a movie</mark> through the `❤️` button to add it to favourites, a second `🖤` click undoes this
   with banners as well for every action.
 
   ![Some films](./images/films.png)
 
-- CLick the `Add Comment 💬` button to ==add a comment== at the bottom of the page. This presents
+- CLick the `Add Comment 💬` button to <mark background='DarkCyan'>add a comment</mark> at the bottom of the page. This presents
   the comment and date posted in the dialogue box.
 
   ![Comment section](./images/comments.png)
 
-- ==Add a new film== by clicking the `SHARE A MOVIE` button which presents a form where the
+- <mark background='DarkCyan'>Add a new film</mark> by clicking the `SHARE A MOVIE` button which presents a form where the
   user inputs all the required details and then using the `Submit Movie` to add it to
   the list of available films below. A `HIDE FORM` button hides the form after use.
-  All fields are ==required== when submitting a new film for consistency.
+  All fields are <mark background='DarkCyan'>required</mark> when submitting a new film for consistency.
 
   ![New film form](./images/form.png)
 
@@ -69,7 +69,7 @@ will still continue to elevate the polishing done so far.
 
 Sample code to render films on the page:
 
-```json
+```
 function renderProducts(movie) {
 
     let card = document.createElement('li');
